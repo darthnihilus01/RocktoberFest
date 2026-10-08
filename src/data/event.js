@@ -42,7 +42,7 @@ export const DEFAULT_CONTENT = {
     headline: "Can't attend? Donate directly.",
     body: "Add your Stripe / Razorpay / UPI link in /admin and it goes live instantly.",
     link: "#donate",
-    upi: "UPI_TBD",
+    upi: "9845502808@ptaxis",
   },
   venue: {
     name: "The Raft, Koramangala",
