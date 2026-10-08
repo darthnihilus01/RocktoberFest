@@ -1,21 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import VinylPlayer from "../components/VinylPlayer.jsx";
 
 export default function Home() {
   const [activeNav, setActiveNav] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState([0]); // First FAQ open by default
   const [copied, setCopied] = useState(false);
 
   const handleCopyUpi = () => {
     navigator.clipboard.writeText("9845502808@ptaxis");
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
-  };
-
-  const toggleFaq = (index) => {
-    setOpenFaq((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-    );
   };
 
   const navItems = [
@@ -141,7 +135,26 @@ export default function Home() {
                     </div>
                   </div>
 
+                  {/* HERO ACTION BUTTONS */}
+                  <div className="flex flex-wrap items-center gap-space-sm pt-1">
+                    <a
+                      href="#ticket-tiers"
+                      className="inline-flex items-center gap-2 bg-secondary text-on-secondary font-title-md text-sm uppercase px-space-md py-2.5 hover:bg-secondary-fixed transition-colors font-bold shadow-[3px_3px_0px_#100e09]"
+                    >
+                      <span className="material-symbols-outlined text-[18px]">confirmation_number</span>
+                      GET TICKETS (₹349+)
+                    </a>
+                    <a
+                      href="#direct-upi"
+                      className="inline-flex items-center gap-2 bg-surface-container border border-outline-variant/40 text-on-surface hover:text-secondary font-title-md text-sm uppercase px-space-md py-2.5 transition-colors font-bold shadow-[3px_3px_0px_#100e09]"
+                    >
+                      <span className="material-symbols-outlined text-[18px]">volunteer_activism</span>
+                      DONATE VIA UPI
+                    </a>
+                  </div>
 
+                  {/* VINYL RECORD PLAYER & PLAYLIST SELECTOR */}
+                  <VinylPlayer />
                 </div>
 
                 {/* RIGHT POSTER: CLEAN, CRISP ARTWORK DISPLAY */}
@@ -256,26 +269,51 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* QR CODE DISPLAY */}
+                  {/* QR DISPLAY */}
                   <div className="md:col-span-4 flex flex-col items-center justify-center">
-                    <div className="bg-surface-container-lowest p-space-md shadow-[4px_4px_0px_#ffb2b6] flex flex-col items-center gap-space-xs w-full max-w-xs">
-                      <div className="w-52 h-52 bg-white p-2.5 flex items-center justify-center border border-outline-variant/30">
-                        <img
-                          src="/qr.png"
-                          alt="Scan to pay via UPI (9845502808@ptaxis)"
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <span className="font-label-sm text-label-sm uppercase text-outline font-mono mt-1">SCAN VIA ANY UPI APP</span>
-                      <span className="font-label-md text-label-md text-tertiary font-bold tracking-wider">₹100 TO ₹50,000</span>
-
-                      {/* Direct mobile UPI app launcher */}
+                    <div className="bg-surface-container-lowest p-space-md shadow-[4px_4px_0px_#ffb2b6] flex flex-col items-center gap-space-xs">
+                      {/* Stylized Blue QR Vector */}
                       <a
-                        href="upi://pay?pa=9845502808@ptaxis&pn=NEIL%20THOMAS%20ABRAHAM%20MINOR%20"
-                        className="mt-2 text-xs font-mono font-bold uppercase bg-secondary text-on-secondary px-3 py-1.5 shadow-[2px_2px_0px_#100e09] hover:bg-secondary-fixed transition-colors md:hidden text-center w-full"
+                        href="upi://pay?pa=9845502808@ptaxis&pn=NEIL%20THOMAS%20ABRAHAM%20MINOR%20&cu=INR"
+                        className="w-40 h-40 bg-surface-container p-2 flex items-center justify-center hover:scale-105 transition-transform border border-outline-variant/30 cursor-pointer group"
+                        title="Click to Pay via UPI"
                       >
-                        ⚡ Open in UPI App (Mobile)
+                        <svg className="w-full h-full text-secondary" viewBox="0 0 100 100">
+                          {/* QR Finder Corners */}
+                          <rect fill="none" height="28" stroke="currentColor" strokeWidth="6" width="28" x="5" y="5" />
+                          <rect fill="currentColor" height="12" width="12" x="13" y="13" />
+                          <rect fill="none" height="28" stroke="currentColor" strokeWidth="6" width="28" x="67" y="5" />
+                          <rect fill="currentColor" height="12" width="12" x="75" y="13" />
+                          <rect fill="none" height="28" stroke="currentColor" strokeWidth="6" width="28" x="5" y="67" />
+                          <rect fill="currentColor" height="12" width="12" x="13" y="75" />
+                          {/* Data Dots Grid */}
+                          <rect fill="currentColor" height="6" width="6" x="40" y="8" />
+                          <rect fill="currentColor" height="6" width="6" x="50" y="16" />
+                          <rect fill="currentColor" height="6" width="6" x="40" y="24" />
+                          <rect fill="currentColor" height="6" width="6" x="8" y="40" />
+                          <rect fill="currentColor" height="6" width="6" x="18" y="48" />
+                          <rect fill="currentColor" height="6" width="6" x="28" y="40" />
+                          <rect fill="currentColor" height="8" width="8" x="40" y="40" />
+                          <rect fill="currentColor" height="8" width="8" x="52" y="48" />
+                          <rect fill="currentColor" height="8" width="8" x="64" y="40" />
+                          <rect fill="currentColor" height="6" width="6" x="76" y="48" />
+                          <rect fill="currentColor" height="6" width="6" x="88" y="40" />
+                          <rect fill="currentColor" height="6" width="6" x="44" y="68" />
+                          <rect fill="currentColor" height="6" width="6" x="56" y="76" />
+                          <rect fill="currentColor" height="6" width="6" x="68" y="68" />
+                          <rect fill="currentColor" height="8" width="8" x="80" y="76" />
+                          <rect fill="currentColor" height="6" width="6" x="72" y="88" />
+                          <rect fill="currentColor" height="6" width="6" x="48" y="88" />
+                        </svg>
                       </a>
+                      <a
+                        href="upi://pay?pa=9845502808@ptaxis&pn=NEIL%20THOMAS%20ABRAHAM%20MINOR%20&cu=INR"
+                        className="font-label-sm text-label-sm uppercase text-secondary font-mono hover:underline flex items-center gap-1 font-bold mt-1 text-center"
+                      >
+                        <span>TAP TO PAY VIA UPI APP</span>
+                        <span className="material-symbols-outlined text-[14px]">arrow_outward</span>
+                      </a>
+                      <span className="font-label-md text-label-md text-tertiary font-bold tracking-wider">₹100 TO ₹50,000</span>
                     </div>
                   </div>
                 </div>
@@ -303,7 +341,14 @@ export default function Home() {
                 </div>
                 <div className="bg-surface-container p-space-md flex flex-col gap-space-xs shadow-[3px_3px_0px_#100e09]">
                   <span className="font-title-md text-title-md text-on-surface uppercase font-bold">Instagram</span>
-                  <a href="#" className="text-tertiary font-label-md font-bold uppercase hover:text-on-surface">@TBA</a>
+                  <a
+                    href="https://instagram.com/rock.tober.fest"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-tertiary font-label-md font-bold uppercase hover:text-on-surface"
+                  >
+                    @rock.tober.fest
+                  </a>
                 </div>
 
               </div>

@@ -60,7 +60,7 @@ export const DEFAULT_CONTENT = {
   sponsors: ["Your logo here — TBA"],
   contact: {
     email: "hello@example.org",
-    instagram: "@TBA",
+    instagram: "@rock.tober.fest",
     phone: "TBA",
   },
 };
