@@ -1,5 +1,4 @@
 import { useState } from "react";
-import VinylPlayer from "../components/VinylPlayer.jsx";
 
 export default function Home() {
   const [activeNav, setActiveNav] = useState("home");
@@ -152,9 +151,6 @@ export default function Home() {
                       DONATE VIA UPI
                     </a>
                   </div>
-
-                  {/* VINYL RECORD PLAYER & PLAYLIST SELECTOR */}
-                  <VinylPlayer />
                 </div>
 
                 {/* RIGHT POSTER: CLEAN, CRISP ARTWORK DISPLAY */}
