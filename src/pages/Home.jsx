@@ -267,22 +267,19 @@ export default function Home() {
 
                   {/* QR DISPLAY */}
                   <div className="md:col-span-4 flex flex-col items-center justify-center">
-                    <div className="bg-surface-container-lowest p-space-md shadow-[4px_4px_0px_#ffb2b6] flex flex-col items-center gap-space-xs">
+                    <div className="bg-surface-container-lowest p-space-md shadow-[4px_4px_0px_#ffb2b6] flex flex-col items-center gap-space-xs w-full max-w-sm">
                       {/* Real Scannable High-Contrast QR Code */}
-                      <div className="w-48 h-48 sm:w-56 sm:h-56 bg-white p-3 flex items-center justify-center border border-outline-variant/30 shadow-md">
+                      <div className="w-64 h-64 sm:w-72 sm:h-72 bg-white p-3.5 sm:p-4 flex items-center justify-center border border-outline-variant/30 shadow-md">
                         <img
                           src="/qr.png"
                           alt="UPI QR Code - Scan to pay via Google Pay, PhonePe, Paytm, or BHIM"
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="font-label-sm text-label-sm uppercase text-secondary font-mono font-bold mt-2 tracking-wider">
+                      <span className="font-label-sm text-label-sm uppercase text-secondary font-mono font-bold mt-2 tracking-wider text-center">
                         SCAN VIA ANY UPI APP
                       </span>
-                      <span className="font-label-md text-label-md text-tertiary font-bold tracking-wider">
-                        ₹100 TO ₹50,000
-                      </span>
-                      <span className="text-[11px] font-mono text-outline uppercase tracking-wider">
+                      <span className="text-[12px] font-mono text-outline uppercase tracking-wider text-center">
                         GPay • PhonePe • Paytm • BHIM
                       </span>
                     </div>
