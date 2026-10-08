@@ -1,21 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import VinylPlayer from "../components/VinylPlayer.jsx";
 
 export default function Home() {
   const [activeNav, setActiveNav] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState([0]); // First FAQ open by default
   const [copied, setCopied] = useState(false);
 
   const handleCopyUpi = () => {
     navigator.clipboard.writeText("9845502808@ptaxis");
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
-  };
-
-  const toggleFaq = (index) => {
-    setOpenFaq((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-    );
   };
 
   const navItems = [
@@ -141,7 +135,26 @@ export default function Home() {
                     </div>
                   </div>
 
+                  {/* HERO ACTION BUTTONS */}
+                  <div className="flex flex-wrap items-center gap-space-sm pt-1">
+                    <a
+                      href="#ticket-tiers"
+                      className="inline-flex items-center gap-2 bg-secondary text-on-secondary font-title-md text-sm uppercase px-space-md py-2.5 hover:bg-secondary-fixed transition-colors font-bold shadow-[3px_3px_0px_#100e09]"
+                    >
+                      <span className="material-symbols-outlined text-[18px]">confirmation_number</span>
+                      GET TICKETS (₹349+)
+                    </a>
+                    <a
+                      href="#direct-upi"
+                      className="inline-flex items-center gap-2 bg-surface-container border border-outline-variant/40 text-on-surface hover:text-secondary font-title-md text-sm uppercase px-space-md py-2.5 transition-colors font-bold shadow-[3px_3px_0px_#100e09]"
+                    >
+                      <span className="material-symbols-outlined text-[18px]">volunteer_activism</span>
+                      DONATE VIA UPI
+                    </a>
+                  </div>
 
+                  {/* VINYL RECORD PLAYER & PLAYLIST SELECTOR */}
+                  <VinylPlayer />
                 </div>
 
                 {/* RIGHT POSTER: CLEAN, CRISP ARTWORK DISPLAY */}
@@ -256,26 +269,26 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* QR CODE DISPLAY */}
+                  {/* QR DISPLAY */}
                   <div className="md:col-span-4 flex flex-col items-center justify-center">
-                    <div className="bg-surface-container-lowest p-space-md shadow-[4px_4px_0px_#ffb2b6] flex flex-col items-center gap-space-xs w-full max-w-xs">
-                      <div className="w-52 h-52 bg-white p-2.5 flex items-center justify-center border border-outline-variant/30">
+                    <div className="bg-surface-container-lowest p-space-md shadow-[4px_4px_0px_#ffb2b6] flex flex-col items-center gap-space-xs">
+                      {/* Real Scannable High-Contrast QR Code */}
+                      <div className="w-48 h-48 sm:w-56 sm:h-56 bg-white p-3 flex items-center justify-center border border-outline-variant/30 shadow-md">
                         <img
                           src="/qr.png"
-                          alt="Scan to pay via UPI (9845502808@ptaxis)"
+                          alt="UPI QR Code - Scan to pay via Google Pay, PhonePe, Paytm, or BHIM"
                           className="w-full h-full object-contain"
                         />
                       </div>
-                      <span className="font-label-sm text-label-sm uppercase text-outline font-mono mt-1">SCAN VIA ANY UPI APP</span>
-                      <span className="font-label-md text-label-md text-tertiary font-bold tracking-wider">₹100 TO ₹50,000</span>
-
-                      {/* Direct mobile UPI app launcher */}
-                      <a
-                        href="upi://pay?pa=9845502808@ptaxis&pn=NEIL%20THOMAS%20ABRAHAM%20MINOR%20"
-                        className="mt-2 text-xs font-mono font-bold uppercase bg-secondary text-on-secondary px-3 py-1.5 shadow-[2px_2px_0px_#100e09] hover:bg-secondary-fixed transition-colors md:hidden text-center w-full"
-                      >
-                        ⚡ Open in UPI App (Mobile)
-                      </a>
+                      <span className="font-label-sm text-label-sm uppercase text-secondary font-mono font-bold mt-2 tracking-wider">
+                        SCAN VIA ANY UPI APP
+                      </span>
+                      <span className="font-label-md text-label-md text-tertiary font-bold tracking-wider">
+                        ₹100 TO ₹50,000
+                      </span>
+                      <span className="text-[11px] font-mono text-outline uppercase tracking-wider">
+                        GPay • PhonePe • Paytm • BHIM
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -298,8 +311,8 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-sm">
                 <div className="bg-surface-container p-space-md flex flex-col gap-space-xs shadow-[3px_3px_0px_#100e09]">
-                  <span className="font-title-md text-title-md text-on-surface uppercase font-bold">Email</span>
-                  <a href="mailto:hello@example.org" className="text-secondary font-label-md font-bold uppercase hover:text-on-surface">hello@example.org</a>
+                  <span className="font-title-md text-title-md text-on-surface uppercase font-bold">Phone</span>
+                  <a href="tel:+917975043076" className="text-secondary font-label-md font-bold uppercase hover:text-on-surface">+91 79 7504 3076</a>
                 </div>
                 <div className="bg-surface-container p-space-md flex flex-col gap-space-xs shadow-[3px_3px_0px_#100e09]">
                   <span className="font-title-md text-title-md text-on-surface uppercase font-bold">Instagram</span>
