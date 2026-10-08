@@ -134,23 +134,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* HERO ACTION BUTTONS */}
-                  <div className="flex flex-wrap items-center gap-space-sm pt-1">
-                    <a
-                      href="#ticket-tiers"
-                      className="inline-flex items-center gap-2 bg-secondary text-on-secondary font-title-md text-sm uppercase px-space-md py-2.5 hover:bg-secondary-fixed transition-colors font-bold shadow-[3px_3px_0px_#100e09]"
-                    >
-                      <span className="material-symbols-outlined text-[18px]">confirmation_number</span>
-                      GET TICKETS (₹349+)
-                    </a>
-                    <a
-                      href="#direct-upi"
-                      className="inline-flex items-center gap-2 bg-surface-container border border-outline-variant/40 text-on-surface hover:text-secondary font-title-md text-sm uppercase px-space-md py-2.5 transition-colors font-bold shadow-[3px_3px_0px_#100e09]"
-                    >
-                      <span className="material-symbols-outlined text-[18px]">volunteer_activism</span>
-                      DONATE VIA UPI
-                    </a>
-                  </div>
+
                 </div>
 
                 {/* RIGHT POSTER: CLEAN, CRISP ARTWORK DISPLAY */}
