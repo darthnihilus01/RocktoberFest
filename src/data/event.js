@@ -34,9 +34,9 @@ export const DEFAULT_CONTENT = {
     { time: "TBA", title: "Closing + thank you", desc: "Wrap-up and donation totals." },
   ],
   tickets: [
-    { tier: "Standing Pass", price: "₹349", perks: "Fri, Standing Ticket — Equal access admission", url: "#ticket-tiers", soldout: false },
-    { tier: "Supporter Pass", price: "₹449", perks: "Fri, Standing Ticket — Covers 1 student learning kit", url: "#ticket-tiers", soldout: false },
-    { tier: "Champion Pass", price: "₹549", perks: "Fri, Standing Ticket — Maximum education impact", url: "#ticket-tiers", soldout: false },
+    { tier: "Standing Pass", price: "₹349", perks: "Fri, Standing Ticket — Equal access admission", url: "https://rzp.io/rzp/WsEdNnP", soldout: false },
+    { tier: "Supporter Pass", price: "₹449", perks: "Fri, Standing Ticket — Covers 1 student learning kit", url: "https://rzp.io/rzp/WsEdNnP", soldout: false },
+    { tier: "Champion Pass", price: "₹549", perks: "Fri, Standing Ticket — Maximum education impact", url: "https://rzp.io/rzp/WsEdNnP", soldout: false },
   ],
   donate: {
     headline: "Can't attend? Donate directly.",

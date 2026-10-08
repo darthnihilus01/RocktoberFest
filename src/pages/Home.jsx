@@ -212,7 +212,12 @@ export default function Home() {
 
               {/* SINGLE PAYMENT BUTTON */}
               <div className="flex justify-center mt-space-md">
-                <a href="#direct-upi" className="inline-flex items-center justify-center gap-space-xs bg-secondary text-on-secondary font-title-md text-title-md uppercase px-space-xl py-4 hover:bg-secondary-fixed transition-colors font-bold shadow-[6px_6px_0px_#100e09] text-xl">
+                <a
+                  href="https://rzp.io/rzp/WsEdNnP"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-space-xs bg-secondary text-on-secondary font-title-md text-title-md uppercase px-space-xl py-4 hover:bg-secondary-fixed transition-colors font-bold shadow-[6px_6px_0px_#100e09] text-xl"
+                >
                   GET IT NOW
                 </a>
               </div>
