@@ -19,7 +19,7 @@ export default function Faq({ faq, sponsors, contact }) {
           </div>
           <div className="card dark" id="contact">
             <h3>Contact</h3>
-            <p>Email: {contact.email}<br />Instagram: {contact.instagram}<br />Phone: {contact.phone}</p>
+            <p>{contact.email ? <>Email: {contact.email}<br /></> : null}Phone: {contact.phone}<br />Instagram: {contact.instagram}</p>
             <form onSubmit={(e) => { e.preventDefault(); alert("Thanks! We'll be in touch. (Connect this to your email service later.)"); }}>
               <label className="field"><span style={{ fontSize: 12, fontWeight: 800 }}>Get updates</span>
                 <input type="email" required placeholder="you@example.com" aria-label="Email for updates" />

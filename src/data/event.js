@@ -59,9 +59,9 @@ export const DEFAULT_CONTENT = {
   ],
   sponsors: ["Your logo here — TBA"],
   contact: {
-    email: "hello@example.org",
+    email: "",
     instagram: "@rock.tober.fest",
-    phone: "TBA",
+    phone: "+91 79 7504 3076",
   },
 };
 
