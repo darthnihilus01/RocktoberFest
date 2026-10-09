@@ -1,21 +1,21 @@
 export const DEFAULT_CONTENT = {
   hero: {
-    collab: "GOONJ.. a voice, an effort  ×  THE KNOWLEDGE CORPS",
+    collab: "THE KNOWLEDGE CORPS",
     title: "FUNDRAISER CONCERT",
     tag: "Featuring Student Bands!",
     dateLabel: "23rd October, 2026",
     timeLabel: "TIME_TBD — to be announced",
     venueLabel: "The Raft, Koramangala",
     tagline:
-      "A student-run concert that will use the money raised to help support education for the underprivileged.",
+      "A student-run concert that will use the money raised to help support orphanage kids and disaster relief.",
     ticketCta: "Get Tickets",
     donateCta: "Donate",
   },
   cause: {
-    heading: "Music for education",
-    body: "Goonj and The Knowledge Corps are putting together a student-run fundraiser. Every ticket and donation helps support education for underprivileged children.",
+    heading: "Music for charity",
+    body: "The Knowledge Corps is putting together a student-run fundraiser. Every ticket and donation helps support orphanage kids and disaster relief.",
     bullets: [
-      "100% of profits directed to education support",
+      "100% of ticket sales directed to charity",
       "Student performers, student organizers",
       "Community night at The Raft, Koramangala",
     ],
@@ -36,7 +36,7 @@ export const DEFAULT_CONTENT = {
   tickets: [
     { tier: "Standing Pass", price: "₹349", perks: "Fri, Standing Ticket — Equal access admission", url: "https://rzp.io/rzp/WsEdNnP", soldout: false },
     { tier: "Supporter Pass", price: "₹449", perks: "Fri, Standing Ticket — Covers 1 student learning kit", url: "https://rzp.io/rzp/WsEdNnP", soldout: false },
-    { tier: "Champion Pass", price: "₹549", perks: "Fri, Standing Ticket — Maximum education impact", url: "https://rzp.io/rzp/WsEdNnP", soldout: false },
+    { tier: "Champion Pass", price: "₹549", perks: "Fri, Standing Ticket — Maximum charity impact", url: "https://rzp.io/rzp/WsEdNnP", soldout: false },
   ],
   donate: {
     headline: "Can't attend? Donate directly.",
@@ -53,7 +53,7 @@ export const DEFAULT_CONTENT = {
   },
   faq: [
     { q: "When and where?", a: "23rd October, 2026 at The Raft, Koramangala. Time TBA." },
-    { q: "Where does the money go?", a: "To support education for underprivileged children, via Goonj and The Knowledge Corps." },
+    { q: "Where does the money go?", a: "To support orphanage kids and disaster relief, via The Knowledge Corps." },
     { q: "Who is performing?", a: "Student bands — lineup to be announced here and editable live by the team." },
     { q: "Refunds?", a: "Policy TBA — contact the organizers." },
   ],

@@ -19,11 +19,11 @@ export default function Navbar() {
   ];
   return (
     <>
-      <div className="announce-bar">🎤 Live Benefit Gig · Bengaluru · October 23, 2026 — 100% for Student Education</div>
+      <div className="announce-bar">🎤 Live Benefit Gig · Bengaluru · October 23, 2026 — 100% of Ticket Sales to Charity</div>
       <header className="site-nav" style={scrolled ? { boxShadow: "0 8px 32px rgba(0,0,0,0.5)" } : undefined}>
         <a className="skip-link" href="#main">Skip to content</a>
         <div className="container nav-inner">
-          <a className="brand" href="#top">GOONJ <span>×</span> TKC</a>
+          <a className="brand" href="#top">TKC</a>
           <nav className={`nav-links ${open ? "open" : ""}`} aria-label="Primary">
             {links.map(([label, href]) => (
               <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>

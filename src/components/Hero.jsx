@@ -55,7 +55,7 @@ export default function Hero({ hero }) {
             </div>
             <div className="poster-sub">🎵 Featuring Student Bands!</div>
             <div className="poster-feature">
-              A student-run concert that<br />will use the money raised<br />to help support Education<br />for the underprivileged.
+              A student-run concert that<br />will use the money raised<br />to help support orphanage kids<br />and disaster relief.
             </div>
           </div>
           <div className="poster-bottom">

@@ -24,8 +24,6 @@ export default function Home() {
         <div className="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-space-md">
           <div className="flex items-center gap-space-md">
             <a href="#top" className="bg-surface-container-lowest px-space-sm py-space-xs shadow-sm flex items-center">
-              <span className="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">GOONJ</span>
-              <span className="font-label-sm text-label-sm text-tertiary px-space-xs font-bold">×</span>
               <span className="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">TKC</span>
             </a>
           </div>
@@ -97,7 +95,7 @@ export default function Home() {
                   {/* PRESENTERS ROW */}
                   <div className="flex items-center gap-2">
                     <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">
-                      GOONJ × THE KNOWLEDGE CORPS
+                      THE KNOWLEDGE CORPS
                     </span>
                     <span className="text-outline text-xs">•</span>
                     <span className="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">
@@ -117,16 +115,37 @@ export default function Home() {
                   </div>
 
                   {/* VALUE PROPOSITION */}
-                  <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-                    A student-run benefit concert raising funds to support education for underprivileged children across Bangalore. 100% of proceeds go directly to charity.
-                  </p>
+                  <div className="flex flex-col gap-3 max-w-xl">
+                    <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                      A student-run benefit concert raising funds to support orphanage kids and disaster relief.
+                    </p>
+                    <div className="flex items-center gap-2.5 flex-wrap">
+                      <span className="bg-tertiary text-on-tertiary px-space-sm py-1 font-label-sm text-label-sm uppercase font-bold shadow-sm tracking-wider">
+                        100%
+                      </span>
+                      <span className="font-body-lg text-body-lg text-on-surface font-semibold leading-normal">
+                        of tickets sales go directly to the charity.
+                      </span>
+                    </div>
+                  </div>
 
                   {/* DATE & VENUE PILL */}
                   <div className="inline-flex flex-wrap items-center gap-x-5 gap-y-2 bg-surface-container-high px-space-md py-space-sm w-fit border border-outline-variant/30">
-                    <div className="flex items-center gap-2 text-secondary font-label-md text-label-md uppercase font-bold">
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=The+Raft,+4,+1st+Main+Rd,+1st+Block,+Koramangala,+Bengaluru,+Karnataka+560034"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-secondary font-label-md text-label-md uppercase font-bold hover:text-secondary-fixed transition-colors group cursor-pointer"
+                      title="Open Google Maps directions to The Raft"
+                    >
                       <span className="material-symbols-outlined text-[20px]">location_on</span>
-                      THE RAFT, KORAMANGALA
-                    </div>
+                      <span className="underline underline-offset-4 decoration-secondary/50 group-hover:decoration-secondary">
+                        THE RAFT, KORAMANGALA
+                      </span>
+                      <span className="material-symbols-outlined text-[16px] opacity-70 group-hover:opacity-100 transition-opacity">
+                        open_in_new
+                      </span>
+                    </a>
                     <span className="hidden sm:inline text-outline">•</span>
                     <div className="flex items-center gap-2 text-primary font-label-md text-label-md uppercase font-bold">
                       <span className="material-symbols-outlined text-[18px]">calendar_month</span>
@@ -141,7 +160,7 @@ export default function Home() {
                 <div className="lg:col-span-5 flex justify-center -mt-6 lg:-mt-12">
                   <div className="w-full max-w-md bg-surface-container p-2.5 shadow-2xl rounded-sm -rotate-2">
                     <img
-                      alt="Goonj x The Knowledge Corps Fundraiser Concert Poster"
+                      alt="The Knowledge Corps Fundraiser Concert Poster"
                       className="w-full h-auto object-cover rounded-sm shadow-inner"
                       src="/image.jpeg"
                     />
@@ -318,10 +337,10 @@ export default function Home() {
       <footer className="w-full bg-surface-container-lowest text-on-surface-variant mt-space-xl border-t border-outline-variant/30">
         <div className="max-w-7xl mx-auto px-margin py-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left">
           <div className="flex flex-col sm:flex-row items-center gap-space-sm">
-            <span className="font-title-md text-title-md text-primary uppercase font-bold">GOONJ × TKC</span>
+            <span className="font-title-md text-title-md text-primary uppercase font-bold">TKC</span>
             <span className="hidden sm:inline text-outline">•</span>
             <span className="font-label-sm text-label-sm uppercase bg-surface-container-high px-space-sm py-1 text-secondary">
-              100% Proceeds to Education
+              100% of Ticket Sales to Charity
             </span>
           </div>
           <span className="font-label-sm text-label-sm text-outline uppercase">

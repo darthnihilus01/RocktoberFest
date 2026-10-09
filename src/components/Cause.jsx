@@ -10,7 +10,7 @@ export default function Cause({ cause }) {
           {/* Left */}
           <div>
             <h2 id="cause-h">
-              MUSIC FOR <span style={{ color: "var(--teal)", fontStyle: "italic" }}>EDUCATION</span>
+              MUSIC FOR <span style={{ color: "var(--teal)", fontStyle: "italic" }}>CHARITY</span>
             </h2>
             <p className="lead">{cause.body}</p>
 
