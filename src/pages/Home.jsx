@@ -313,7 +313,10 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-sm">
                 <div className="bg-surface-container p-space-md flex flex-col gap-space-xs shadow-[3px_3px_0px_#100e09]">
                   <span className="font-title-md text-title-md text-on-surface uppercase font-bold">Phone</span>
-                  <a href="tel:+917975043076" className="text-secondary font-label-md font-bold uppercase hover:text-on-surface">+91 79 7504 3076</a>
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+917975043076" className="text-secondary font-label-md font-bold uppercase hover:text-on-surface">+91 79 7504 3076</a>
+                    <a href="tel:+919845502808" className="text-secondary font-label-md font-bold uppercase hover:text-on-surface">+91 98455 02808</a>
+                  </div>
                 </div>
                 <div className="bg-surface-container p-space-md flex flex-col gap-space-xs shadow-[3px_3px_0px_#100e09]">
                   <span className="font-title-md text-title-md text-on-surface uppercase font-bold">Instagram</span>

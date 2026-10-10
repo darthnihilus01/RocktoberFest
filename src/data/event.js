@@ -61,7 +61,7 @@ export const DEFAULT_CONTENT = {
   contact: {
     email: "",
     instagram: "@rock.tober.fest",
-    phone: "+91 79 7504 3076",
+    phone: "+91 79 7504 3076, +91 98455 02808",
   },
 };
 

@@ -27,11 +27,16 @@ export default function Contact({ contact }) {
           </div>
           <div className="card">
             <h3>Phone</h3>
-            <p style={{ marginTop: 8, fontWeight: 700, color: 'var(--on-surface)' }}>
-              <a href={`tel:${contact.phone?.replace(/\s+/g, '')}`}>
-                {contact.phone}
-              </a>
-            </p>
+            <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 4 }}>
+              {contact.phone?.split(',').map((p) => {
+                const trimmed = p.trim();
+                return (
+                  <a key={trimmed} href={`tel:${trimmed.replace(/\s+/g, '')}`} style={{ fontWeight: 700, color: 'var(--on-surface)' }}>
+                    {trimmed}
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
